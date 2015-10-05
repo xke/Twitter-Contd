@@ -2,7 +2,7 @@
 
 This is a basic Twitter client that uses the [Twitter API](https://apps.twitter.com/) to read and compose tweets. It's also the assignment for Week 3 of the [CodePath](http://www.codepath.com) iOS for Engineers class for Fall 2015, built with [Xcode 7.0](https://developer.apple.com/xcode/download/) and Swift. 
 
-Last week, the screen from my 2012 laptop broke and had to be replaced. So this week's episode was viewed on a new screen with over 4 million functional pixels ("Retina Display"). More hours staring at a screen! For this homework, I prioritized Twitter features related to reading tweets. Because relatively few people actively interact with tweets in real life (and of course they can use the official Twitter app for that).
+Last week, the screen from my 2012 laptop broke and had to be replaced. So this week's episode was viewed on a new screen with over 4 million functional pixels ("Retina Display"). More hours staring at a screen with eyes that need corrective lenses! For this homework, I prioritized Twitter features related to reading tweets. Because relatively few people actively interact with tweets in real life (and of course they can use the official Twitter app for that).
 
 Time spent: 16 hours
 
