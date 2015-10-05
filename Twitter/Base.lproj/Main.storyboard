@@ -266,7 +266,7 @@
                     <navigationItem key="navigationItem" title="Tweets" id="iuW-OM-oo9">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="eEq-O0-sBl">
                             <connections>
-                                <action selector="onLogout:" destination="La3-0X-cnh" id="dL9-vT-JNl"/>
+                                <action selector="onLogout:" destination="La3-0X-cnh" id="lys-Ps-7gL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Compose" id="6X5-pG-FDm">
@@ -276,7 +276,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="onLogout" destination="eEq-O0-sBl" id="DGj-XV-njL"/>
                         <outlet property="tableView" destination="PB5-Or-En3" id="wgo-IH-GQ2"/>
                     </connections>
                 </viewController>
