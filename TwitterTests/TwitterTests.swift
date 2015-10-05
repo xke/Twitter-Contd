@@ -3,7 +3,7 @@
 //  TwitterTests
 //
 //  Created by Xian on 10/3/15.
-//  Copyright © 2015 Xian. All rights reserved.
+//  Copyright © 2015 swifterlabs. All rights reserved.
 //
 
 import XCTest
