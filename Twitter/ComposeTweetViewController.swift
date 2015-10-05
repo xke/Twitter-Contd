@@ -38,6 +38,7 @@ class ComposeTweetViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+
     @IBAction func postTweetAction(sender: UIButton) {
         let params: NSDictionary = [
             "status": newTweetTextView.text

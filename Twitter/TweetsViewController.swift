@@ -57,7 +57,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         // first tweet load
-        loadTweets(nil)
+        loadTweets()
 
     }
     
@@ -70,21 +70,25 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         // so we can take the opportunity to refresh tweets!
         
         if (TwitterClient.sharedInstance.postedTweet == true) {
-            loadTweets(nil)
+            loadTweets()
             TwitterClient.sharedInstance.postedTweet = false
         }
         
     }
 
+    func loadTweets() {
+        loadTweets(nil)
+    }
+    
     func loadTweets(infiniteHandler: ((Void) -> Void)?) {
         
         // params reference: https://dev.twitter.com/rest/reference/get/statuses/home_timeline
 
         var params = ["count": TweetsPerLoad]
         
-        // check max tweet for self.tweets
+        // for an infinite scroll request, check max tweet for self.tweets
         
-        if (tweets != nil && tweets!.count > 0) {
+        if (infiniteHandler != nil && tweets != nil && tweets!.count > 0) {
             let max_tweet = tweets![tweets!.count-1].idStr!
             // minus 1, to avoid a repeat tweet (older tweets < newer tweets)
             params["max_id"] = Int(max_tweet)! - 1
@@ -100,22 +104,32 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
                 }
                 print("loadTweets adding tweet count \(tweets!.count)")
 
-                if (self.tweets != nil) {
+                if (self.tweets != nil && infiniteHandler != nil) {
                     self.tweets = self.tweets! + tweets!
                 } else {
                     self.tweets = tweets!
                 }
                 
-                
-                //let newID = tweets![tweets!.count-1].idStr!
-                //print("new Max ID? \(newID)")
                 print("loadTweets done with tweet count \(self.tweets!.count)")
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
 
-                infiniteHandler?() // handle back, if on infinite load
+                if (infiniteHandler != nil) {
+                    infiniteHandler?() // handle back, if on infinite load
+                } else {
+                    // scroll to top, because it's a refresh
+                    self.scrollToTop()
+                }
+                
+                
+                
             })
         })
+    }
+    
+    func scrollToTop() {
+        let top = NSIndexPath(forRow: Foundation.NSNotFound, inSection: 0);
+        self.tableView.scrollToRowAtIndexPath(top, atScrollPosition: UITableViewScrollPosition.Top, animated: true);
     }
     
     override func didReceiveMemoryWarning() {
@@ -127,7 +141,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }
-
+    
     // table view
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -145,7 +159,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -159,11 +172,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)!
             
-            //let destinationNavigationController = segue.destinationViewController as! UINavigationController
-            //let tweetDetailsViewController = destinationNavigationController.topViewController as! TweetDetailsViewController
-            
             let tweetDetailsViewController = segue.destinationViewController as! TweetDetailsViewController
-            
             tweetDetailsViewController.tweet = tweets![indexPath.row]
             
         }
