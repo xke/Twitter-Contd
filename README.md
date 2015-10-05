@@ -36,6 +36,7 @@ Credits
 * [Twitter API](https://apps.twitter.com/)
 * CodePath videos on [Twitter OAuth](https://vimeo.com/107295686) and [User Persistence](https://vimeo.com/107319225)
 * CodePath [Pull to Refresh guide](https://guides.codepath.com/ios/Table-View-Guide#implementing-pull-to-refresh-with-uirefreshcontrol)
+* [UIScrollView-InfiniteScroll](https://github.com/pronebird/UIScrollView-InfiniteScroll) pod for infinite scrolling
 * [Implementation from jerrysu for reference](https://github.com/jerrysu/CodePath-Twitter)
 * [Implementation from toph808 for reference](https://github.com/toph808/twitter)
 * [Yelp implementation from xke for reference](https://github.com/xke/Yelp)
