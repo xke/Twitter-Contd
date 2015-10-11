@@ -18,7 +18,7 @@ class TweetDetailsViewController: UIViewController {
     
     var tweet: Tweet!
     
-    let tapRecognizer = UITapGestureRecognizer()
+    
     var tweetURL: NSURL?
     
     override func viewDidLoad() {
@@ -39,16 +39,20 @@ class TweetDetailsViewController: UIViewController {
         // rounded edge!
         userImageView.layer.cornerRadius = 9.0
         
+        // allow tapping to get to profile view
+        
+        
         // find first URL in the text label
         tweetURL = findURLFromText(tweet.text!)
         if tweetURL != nil {
             
             // allow click through to link if there's a URL
             // http://www.avocarrot.com/blog/implement-gesture-recognizers-swift/
+            let openURLTapRecognizer = UITapGestureRecognizer()
             
-            tapRecognizer.addTarget(self, action: "openURL")
+            openURLTapRecognizer.addTarget(self, action: "openURL")
             tweetTextLabel.userInteractionEnabled = true
-            tweetTextLabel.addGestureRecognizer(tapRecognizer)
+            tweetTextLabel.addGestureRecognizer(openURLTapRecognizer)
             
             // make the URL part of the label blue!
             tweetTextLabel.attributedText = colorURLInText(tweetTextLabel.text!, urlString: tweetURL!.absoluteString)
@@ -58,6 +62,9 @@ class TweetDetailsViewController: UIViewController {
 
     
     func findURLFromText(text: String) -> NSURL? {
+        
+        // reference http://stackoverflow.com/questions/29496821/extract-links-from-string-optimization/32937666
+        
         do {
             let types: NSTextCheckingType = .Link
             let detector = try NSDataDetector(types: types.rawValue)

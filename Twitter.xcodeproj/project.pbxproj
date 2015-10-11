@@ -14,6 +14,9 @@
 		4600072E1BC1A112003A294C /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4600072D1BC1A112003A294C /* TweetDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		460007341BC1D7A8003A294C /* ComposeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460007331BC1D7A8003A294C /* ComposeTweetViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		460044F41BC233FA0047F8E0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 460044F31BC233FA0047F8E0 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		462286921BCA083D00A142AA /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462286911BCA083D00A142AA /* MenuTransitionManager.swift */; settings = {ASSET_TAGS = (); }; };
+		462286941BCA140600A142AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462286931BCA140600A142AA /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4627D0E71BC9FD36007EBE2E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627D0E61BC9FD36007EBE2E /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		466DD66A1BC06ED600D4A438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DD6691BC06ED600D4A438 /* AppDelegate.swift */; };
 		466DD66C1BC06ED600D4A438 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DD66B1BC06ED600D4A438 /* LoginViewController.swift */; };
 		466DD66F1BC06ED600D4A438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466DD66D1BC06ED600D4A438 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		4600072D1BC1A112003A294C /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		460007331BC1D7A8003A294C /* ComposeTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewController.swift; sourceTree = "<group>"; };
 		460044F31BC233FA0047F8E0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		462286911BCA083D00A142AA /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
+		462286931BCA140600A142AA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4627D0E61BC9FD36007EBE2E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		466DD6661BC06ED600D4A438 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		466DD6691BC06ED600D4A438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		466DD66B1BC06ED600D4A438 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +131,10 @@
 				466DD66B1BC06ED600D4A438 /* LoginViewController.swift */,
 				460007271BC0A10B003A294C /* TweetsViewController.swift */,
 				4600072D1BC1A112003A294C /* TweetDetailsViewController.swift */,
+				462286931BCA140600A142AA /* ProfileViewController.swift */,
 				460007331BC1D7A8003A294C /* ComposeTweetViewController.swift */,
+				4627D0E61BC9FD36007EBE2E /* MenuViewController.swift */,
+				462286911BCA083D00A142AA /* MenuTransitionManager.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -371,9 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				460007341BC1D7A8003A294C /* ComposeTweetViewController.swift in Sources */,
+				4627D0E71BC9FD36007EBE2E /* MenuViewController.swift in Sources */,
 				460007241BC08F16003A294C /* User.swift in Sources */,
 				4600072B1BC0E2DD003A294C /* TweetCell.swift in Sources */,
+				462286921BCA083D00A142AA /* MenuTransitionManager.swift in Sources */,
 				4600072E1BC1A112003A294C /* TweetDetailsViewController.swift in Sources */,
+				462286941BCA140600A142AA /* ProfileViewController.swift in Sources */,
 				460007261BC08F35003A294C /* Tweet.swift in Sources */,
 				460007281BC0A10B003A294C /* TweetsViewController.swift in Sources */,
 				466DD66C1BC06ED600D4A438 /* LoginViewController.swift in Sources */,

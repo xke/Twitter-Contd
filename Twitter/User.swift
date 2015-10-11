@@ -14,21 +14,39 @@ let currentUserKey = "kCurrentUserKey"
 let userDidLoginNotification = "userDidLoginNotification"
 let userDidLogoutNotification = "userDidLogoutNotification"
 
+// api reference: https://dev.twitter.com/rest/reference/get/users/show
+
 class User: NSObject {
     var name: String?
     var screenname: String?
+    
     var profileImageUrl: String?
+    var profileBannerUrl: String?
+
     var tagline: String?
     var dictionary: NSDictionary
+    
+    var followerCount: Int?
+    var followingCount: Int?
+    var tweetCount: Int?
+    
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
         
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
+        
         profileImageUrl = dictionary["profile_image_url"] as? String
+        profileImageUrl = profileImageUrl!.stringByReplacingOccurrencesOfString("_normal", withString: "_bigger")
+        
+        profileBannerUrl = dictionary["profile_banner_url"] as? String
+        
         tagline = dictionary["description"] as? String
         
+        followerCount = dictionary["followers_count"] as? Int
+        followingCount = dictionary["friends_count"] as? Int
+        tweetCount = dictionary["statuses_count"] as? Int
     }
     
     func logout() {
