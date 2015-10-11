@@ -20,7 +20,7 @@ Time spent: 10 hours
 - [X] Home Timeline
    - [X] Tapping on a user image should bring up that user's profile page
 
-### Walkthrough
+#### Walkthrough
 
 ![Video Walkthrough](TwitterContdAnimated.gif)
 
