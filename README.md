@@ -1,6 +1,6 @@
 ## CodePath Week 4: Twitter Contd.
 
-This is the assignment for Week 4 of the [CodePath](http://www.codepath.com) iOS for Engineers class for Fall 2015, built with [Xcode 7.0](https://developer.apple.com/xcode/download/) and Swift. 
+This is the assignment for Week 4 of the [CodePath](http://www.codepath.com) iOS for Engineers class for Fall 2015, built with [Xcode 7.0](https://developer.apple.com/xcode/download/) and [Swift](https://developer.apple.com/swift/). 
 
 It builds on top of Week 3's [basic Twitter client](https://github.com/xke/Twitter) to add sidebar menu functionality utilizing gesture recognition, and a profile page linked from the menu and from images in the main timeline.
 
